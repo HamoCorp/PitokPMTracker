@@ -134,8 +134,8 @@
   };
 
   var onmsg = function(e) {
-    var msg = '%c[Window]%c → %c' + h(e.source) + '%c ' + (typeof e.data === 'string' ? e.data : JSON.stringify(e.data));
-    console.log(msg, 'color: red;', '', 'color: green;', '');
+    var msg = '%c[Window]%c → %c' + h(e.source) + '%c origin: '+ e.origin + '%c \ndata: ' + (typeof e.data === 'string' ? e.data : JSON.stringify(e.data)) + '\n';
+    console.log(msg, 'color: yellow;', '', 'color: green;', '', 'color: lightblue', e);
   };
 
   window.addEventListener('message', onmsg);
